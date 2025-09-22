@@ -1,0 +1,695 @@
+/* ===============================
+   СОВРЕМЕННЫЙ CSS ДЛЯ САЙТА-ПОРТФОЛИО
+   =============================== */
+
+/* Основные переменные для цветовой схемы */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --light-bg: #ecf0f1;
+    --dark-bg: #34495e;
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --border-color: #bdc3c7;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Контейнер страницы */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ===============================
+   ХЕДЕР И НАВИГАЦИЯ
+   =============================== */
+
+.header,
+#header {
+    background: linear-gradient(45deg, var(--primary-color), var(--dark-bg));
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before,
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.header:hover::before,
+#header:hover::before {
+    left: 100%;
+}
+
+/* Навигация */
+.nav,
+#menu {
+    background: var(--light-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list,
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.nav-link,
+#menu ul li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: var(--transition);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover,
+#menu ul li a:hover {
+    color: white;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.nav-link.active,
+#menu ul li a.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* ===============================
+   ОСНОВНОЙ КОНТЕНТ
+   =============================== */
+
+.content,
+#content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.content::before,
+#content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color), var(--warning-color), var(--accent-color));
+}
+
+/* ===============================
+   ГЛАВНАЯ СТРАНИЦА
+   =============================== */
+
+.author-info {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.author-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.author-group {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.author-photo,
+#content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 5px solid white;
+    transition: var(--transition);
+}
+
+.author-photo:hover,
+#content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.author-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    text-align: justify;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Навыки */
+.skills-section {
+    margin: 3rem 0;
+}
+
+.skills-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.skills-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+}
+
+.skills-grid,
+#content>div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill-card,
+#content>div>div {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before,
+#content>div>div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+}
+
+.skill-card:hover,
+#content>div>div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--secondary-color);
+}
+
+/* Опыт работы */
+.experience-section {
+    margin: 3rem 0;
+}
+
+.experience-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.experience-item,
+#content>div:last-child>div {
+    background: var(--light-bg);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.experience-item:hover,
+#content>div:last-child>div:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-role {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===============================
+   СТРАНИЦА НОВОСТЕЙ
+   =============================== */
+
+.news-item,
+#content>div {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.news-item:hover,
+#content>div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.news-title,
+#content>div h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.news-title:hover,
+#content>div h2:hover {
+    color: var(--secondary-color);
+}
+
+.news-meta,
+#content>div p:first-of-type {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--light-bg);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.news-content {
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+/* ===============================
+   СТРАНИЦА ТОВАРОВ
+   =============================== */
+
+.products-grid,
+#content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card,
+#content>div {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover,
+#content>div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-image,
+#content>div img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-image:hover,
+#content>div img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.product-price,
+#content>div p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+/* ===============================
+   СТРАНИЦА КОНТАКТОВ
+   =============================== */
+
+.contact-info {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.contact-item,
+#content p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.contact-item:hover,
+#content p:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button,
+#content button {
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+.contact-button:hover,
+#content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* ===============================
+   ФУТЕР
+   =============================== */
+
+.footer,
+#footer {
+    background: linear-gradient(45deg, var(--primary-color), var(--dark-bg));
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    position: relative;
+}
+
+.footer::before,
+#footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color), var(--warning-color));
+}
+
+/* ===============================
+   АДАПТИВНОСТЬ
+   =============================== */
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .header,
+    #header {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .nav-list,
+    #menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content,
+    #content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .skills-grid,
+    #content>div {
+        grid-template-columns: 1fr;
+    }
+
+    .author-name {
+        font-size: 2rem;
+    }
+
+    .author-photo,
+    #content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header,
+    #header {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .nav-link,
+    #menu ul li a {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .author-name {
+        font-size: 1.8rem;
+    }
+
+    .author-photo,
+    #content img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ===============================
+   АНИМАЦИИ И ЭФФЕКТЫ
+   =============================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Плавные переходы для всех интерактивных элементов */
+a,
+button,
+.skill-card,
+.product-card,
+.news-item,
+.experience-item {
+    transition: var(--transition);
+}
+
+/* Улучшенные эффекты наведения */
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+}
+
+/* Прогресс-бары для навыков */
+.skill-progress {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--success-color));
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Дополнительные достижения */
+.additional-info {
+    margin: 3rem 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.achievement-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.achievement-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
