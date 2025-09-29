@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <script src="../modal.js"></script>
 </head>
 
 <body>
@@ -19,12 +20,27 @@
         </ul>
     </div>
     <div id="content">
+        <div id="podContent">
         <p>Адрес электронной почты: 2a4xt3s@gmail.com</p>
         <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
-        <button>Позвоните мне</button>
+        </div>
+        <button id="callMeBtn" class="contact-button">Позвоните мне</button>
     </div>
     <!-- Футер -->
     <footer class="footer">
+        <!-- Модальное окно -->
+        <div class="modal-backdrop" id="callModal" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+                <button class="modal-close" id="callModalClose" aria-label="Закрыть">×</button>
+                <h3 id="callModalTitle">Связаться по телефону</h3>
+                <p class="contact-item">Телефон: <a href="tel:+79990001122">+7 (999) 000‑11‑22</a></p>
+                <div class="modal-actions">
+                    <a href="tel:+79990001122" class="contact-button">Позвонить</a>
+                    <a href="https://t.me/aplaygs" target="_blank" class="contact-button alt">Написать в Telegram</a>
+                </div>
+            </div>
+        </div>
+
         <p>&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
         <p>Создано с ❤️ для семестровой работы</p>
     </footer>
