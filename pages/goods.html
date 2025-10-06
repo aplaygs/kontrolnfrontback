@@ -1,45 +1,150 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Товары</title>
-    <link rel="stylesheet" href="../style/styles.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Навигация -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">Портфолио</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">🏠 Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">📰 Новости</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">🛍️ Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">📞 Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-<body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <div>
-            <img src="../images/goods1.jpg" alt="Товар 1" width="200" height="200">
-            <p>Название: Барсик</p>
-            <p>Цена: 10000 руб.</p>
+    <!-- Хиро секция -->
+    <section class="bg-success text-white py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="display-5 fw-bold mb-3">Наши товары</h1>
+            <p class="lead">Эксклюзивная коллекция котиков для вашего проекта</p>
+          </div>
         </div>
-        <div>
-            <img src="../images/goods2.jpg" alt="Товар 2" width="200" height="200">
-            <p>Название: Артурчик</p>
-            <p>Цена: 20000 руб.</p>
+      </div>
+    </section>
+
+    <!-- Товары -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+          <!-- Товар 1 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="../images/goods1.jpg" class="card-img-top" alt="Барсик" style="height: 300px; object-fit: cover;">
+                <span class="position-absolute top-0 start-0 m-2 badge bg-primary rounded-pill">Популярный</span>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Барсик</h5>
+                <p class="card-text text-muted mb-3">Классический представитель кошачьих. Идеально подходит для домашних проектов.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h4 text-success mb-0 fw-bold">10,000 ₽</span>
+                  <button class="btn btn-outline-success">
+                    <i class="bi bi-cart-plus"></i> Купить
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <div class="d-flex justify-content-center">
+                  <small class="text-warning">
+                    ⭐⭐⭐⭐⭐ <span class="text-muted">(5.0)</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="../images/goods2.jpg" class="card-img-top" alt="Артурчик" style="height: 300px; object-fit: cover;">
+                <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark rounded-pill">Премиум</span>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Артурчик</h5>
+                <p class="card-text text-muted mb-3">Элитная модель с повышенным уровнем мурчания и интеллекта.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h4 text-success mb-0 fw-bold">20,000 ₽</span>
+                  <button class="btn btn-outline-success">
+                    <i class="bi bi-cart-plus"></i> Купить
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <div class="d-flex justify-content-center">
+                  <small class="text-warning">
+                    ⭐⭐⭐⭐⭐ <span class="text-muted">(4.8)</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 3 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="../images/goods3.jpg" class="card-img-top" alt="Нейрокот" style="height: 300px; object-fit: cover;">
+                <span class="position-absolute top-0 start-0 m-2 badge bg-danger rounded-pill">Эксклюзив</span>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Нейрокот</h5>
+                <p class="card-text text-muted mb-3">Революционная технология ИИ в компактном пушистом корпусе.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h4 text-success mb-0 fw-bold">♾️ ₽</span>
+                  <button class="btn btn-outline-danger" disabled>
+                    <i class="bi bi-heart"></i> Бесценно
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <div class="d-flex justify-content-center">
+                  <small class="text-warning">
+                    ⭐⭐⭐⭐⭐ <span class="text-muted">(∞)</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-            <img src="../images/goods3.jpg" alt="Товар 3" width="200" height="200">
-            <p>Название: Нейрокот</p>
-            <p>Цена: ♾️ руб.</p>
+
+        <!-- Дополнительная информация -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="alert alert-info d-flex align-items-center" role="alert">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              <div>
+                <strong>Внимание!</strong> Все товары поставляются с гарантией мурчания и встроенным детектором открывашек.
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </main>
+
     <!-- Футер -->
-    <footer class="footer">
-        <p>&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
-        <p>Создано с ❤️ для семестровой работы</p>
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
+        <p class="mb-0 text-white-50">Создано с ❤️ для семестровой работы</p>
+      </div>
     </footer>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

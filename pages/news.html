@@ -1,49 +1,115 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Новости</title>
-    <link rel="stylesheet" href="../style/styles.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Навигация -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">Портфолио</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">🏠 Главная</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">📰 Новости</a></li>
+            <li class="nav-item"><a class="nav-link" href="goods.html">🛍️ Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">📞 Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-<body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <div>
-            <h2>Кот дня: обучение по графику</h2>
-            <p>Дата: 29 сентября 2025 | Автор: Лапкин Котей</p>
-            <p>Текст новости: Сегодня в 8 утра кот Пушистик демонстративно лег на клавиатуру во время важного митапа.
-                Количество усмешек среди слушателей превысило плановые показатели в 3 раза.</p>
+    <!-- Хиро секция -->
+    <section class="bg-primary text-white py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="display-5 fw-bold mb-3">Лента новостей</h1>
+            <p class="lead">Свежие события проекта: релизы, багфиксы и коты-тимлиды</p>
+          </div>
         </div>
-        <div>
-            <h2>Релиз: проект наконец работает</h2>
-            <p>Дата: 28 сентября 2025 | Автор: К. Разработчик</p>
-            <p>Текст новости: После 42 чашек чая и 73 багфиксов первый стабильный релиз проекта опубликован на GitHub, а
-                клавиатура официально признана героем дня.</p>
+      </div>
+    </section>
+
+    <!-- Новости -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <!-- Новость 1 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="../images/goods2.jpg" class="card-img-top" alt="Кот дня" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary rounded-pill">Кот дня</span>
+                  <small class="text-body-secondary">29.09.2025</small>
+                </div>
+                <h5 class="card-title">Обучение по графику</h5>
+                <p class="card-text flex-grow-1">Сегодня в 8 утра кот Пушистик демонстративно лег на клавиатуру во время важного митапа. Количество усмешек среди слушателей превысило плановые показатели в 3 раза.</p>
+                <div class="mt-auto">
+                  <small class="text-body-secondary">
+                    <i class="bi bi-person-fill"></i> Лапкин Котей
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Новость 2 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="../images/goods3.jpg" class="card-img-top" alt="Релиз" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-success rounded-pill">Релиз</span>
+                  <small class="text-body-secondary">28.09.2025</small>
+                </div>
+                <h5 class="card-title">Проект наконец работает</h5>
+                <p class="card-text flex-grow-1">После 42 чашек чая и 73 багфиксов первый стабильный релиз проекта опубликован на GitHub, а клавиатура официально признана героем дня.</p>
+                <div class="mt-auto">
+                  <small class="text-body-secondary">
+                    <i class="bi bi-person-fill"></i> К. Разработчик
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Новость 3 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="../images/goods1.jpg" class="card-img-top" alt="Баг столетия" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-warning text-dark rounded-pill">Баг фикс</span>
+                  <small class="text-body-secondary">27.09.2025</small>
+                </div>
+                <h5 class="card-title">Найден баг столетия</h5>
+                <p class="card-text flex-grow-1">Баг, появлявшийся только в новолуние на MacBook с наклейкой динозавра, был наконец побежден коллективным усилием команды.</p>
+                <div class="mt-auto">
+                  <small class="text-body-secondary">
+                    <i class="bi bi-person-fill"></i> Тестировщик Позитивный
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-            <h2>Полоса везения: найден баг столетия</h2>
-            <p>Дата: 27 сентября 2025 | Автор: Тестировщик Позитивный</p>
-            <p>Текст новости: Баг, появлявшийся только в новолуние на MacBook с наклейкой динозавра, был наконец
-                побежден коллективным усилием команды.</p>
-        </div>
-    </div>
+      </div>
+    </main>
 
     <!-- Футер -->
-    <footer class="footer">
-        <p>&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
-        <p>Создано с ❤️ для семестровой работы</p>
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
+        <p class="mb-0 text-white-50">Создано с ❤️ для семестровой работы</p>
+      </div>
     </footer>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
