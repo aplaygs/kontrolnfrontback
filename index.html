@@ -1,175 +1,224 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Портфолио - Мишуков Владислав Романович</title>
-    <link rel="stylesheet" href="style/styles.css">
-</head>
-
-<body>
-    <div class="page"> <!-- Хедер -->
-        <header class="header">
-            <h1 class="header__title">Портфолио студента</h1>
-        </header>
-
-        <!-- Навигация -->
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="#">🏠 Главная</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/news.html">📰 Новости</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/goods.html">🛍️ Товары</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/contacts.html">📞 Контакты</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Основной контент -->
-        <main class="main main--fade-in">
-            <!-- Информация об авторе -->
-            <section class="profile">
-                <h2 class="profile__name">Мишуков Владислав Романович</h2>
-                <p class="profile__group">Группа: ЭФБО-11-24</p>
-                <img class="profile__photo profile__photo--hover-lift" src="images/photo.jpg" alt="Фото автора"
-                    width="200" height="200">
-
-                <div class="about">
-                    <h3 class="about__title">Обо мне</h3>
-                    <p class="about__text">
-                        Я родился в Москве в 70-м на краю города. Глупость рано ударила в голову.
-                        В четыре активно ругался. Потом школа, форма, драки, клей. Так я становился сильней.
-                        Воровал деньги в раздевалке.
-                    </p>
-                    <p class="about__text">
-                        Сейчас я студент и изучаю веб-разработку. Увлекаюсь современными технологиями,
-                        изучаю HTML, CSS, JavaScript. Мечтаю стать крутым фронтенд-разработчиком.
-                        В свободное время играю в игры, читаю техническую литературу и смотрю обучающие видео.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Навыки -->
-            <section class="skills">
-                <h2 class="skills__title">Мои навыки</h2>
-                <div class="skills__grid">
-                    <div class="skill skill--slide-in">
-                        <h3 class="skill__icon">☕</h3>
-                        <h3 class="skill__title">Эксперт по чаю</h3>
-                        <p class="skill__description">Мастер выбора правильной кружки к каждому коду</p>
-                        <div class="skill__progress">
-                            <div class="skill__progress-bar skill__progress-bar--90"></div>
-                        </div>
-                    </div>
-                    <div class="skill skill--slide-in">
-                        <h3 class="skill__icon">🦥</h3>
-                        <h3 class="skill__title">Procrastinator</h3>
-                        <p class="skill__description">Супер сила откладывать дедлайны до последнего</p>
-                        <div class="skill__progress">
-                            <div class="skill__progress-bar skill__progress-bar--95"></div>
-                        </div>
-                    </div>
-                    <div class="skill skill--slide-in">
-                        <h3 class="skill__icon">🧠</h3>
-                        <h3 class="skill__title">Гуглер</h3>
-                        <p class="skill__description">Мгновенно нахожу любой ответ через гугл</p>
-                        <div class="skill__progress">
-                            <div class="skill__progress-bar skill__progress-bar--85"></div>
-                        </div>
-                    </div>
-                    <div class="skill skill--slide-in">
-                        <h3 class="skill__icon">🎮</h3>
-                        <h3 class="skill__title">Геймер-переключатель</h3>
-                        <p class="skill__description">Легко переключаюсь между кодом и играми</p>
-                        <div class="skill__progress">
-                            <div class="skill__progress-bar skill__progress-bar--100"></div>
-                        </div>
-                    </div>
-                    <div class="skill skill--slide-in">
-                        <h3 class="skill__icon">🐈</h3>
-                        <h3 class="skill__title">Любитель мемов</h3>
-                        <p class="skill__description">Знаю тысячу мемов и котиков</p>
-                        <div class="skill__progress">
-                            <div class="skill__progress-bar skill__progress-bar--80"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Опыт работы -->
-            <section class="experience">
-                <h2 class="experience__title">Опыт работы</h2>
-                <div class="experience__item">
-                    <h3 class="experience__role">Студент-программист</h3>
-                    <p class="experience__company">РТУ МИРЭА</p>
-                    <p class="experience__period">2024 - настоящее время</p>
-                    <p class="experience__description">
-                        Изучаю основы веб-разработки, работаю с HTML, CSS и JavaScript.
-                        Участвую в семестровых проектах и выполняю практические задания.
-                    </p>
-                </div>
-                <div class="experience__item">
-                    <h3 class="experience__role">Фрилансер-новичок</h3>
-                    <p class="experience__company">Самозанятость</p>
-                    <p class="experience__period">2024 - настоящее время</p>
-                    <p class="experience__description">
-                        Выполняю небольшие заказы по созданию простых веб-страниц.
-                        Учусь работать с клиентами и улучшаю свои технические навыки.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Дополнительная информация -->
-            <section class="achievements">
-                <h2 class="achievements__title">Дополнительные достижения</h2>
-                <div class="achievements__grid">
-                    <div class="achievement-card">
-                        <div class="achievement-card__icon">🏆</div>
-                        <h3 class="achievement-card__title">Лучший студент недели</h3>
-                        <p class="achievement-card__description">За выдающиеся успехи в прокрастинации</p>
-                    </div>
-                    <div class="achievement-card">
-                        <div class="achievement-card__icon">🎯</div>
-                        <h3 class="achievement-card__title">Мастер дедлайнов</h3>
-                        <p class="achievement-card__description">Сдаю все работы в последнюю секунду</p>
-                    </div>
-                    <div class="achievement-card">
-                        <div class="achievement-card__icon">☕</div>
-                        <h3 class="achievement-card__title">Кофеин-зависимый</h3>
-                        <p class="achievement-card__description">Потребляю 5+ чашек чая в день</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Футер -->
-        <footer class="footer">
-            <p class="footer__text">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
-            <p class="footer__text">Создано с ❤️ для семестровой работы</p>
-        </footer>
-    </div>
-
-    <!-- Модальное окно для контакта -->
-    <div class="modal modal-backdrop">
-        <div class="modal__content">
-            <button class="modal__close">&times;</button>
-            <h3 class="modal__title">Связаться с автором</h3>
-            <a class="modal__phone-link" href="tel:+79001234567">Позвонить: +7 (900) 123-45-67</a>
-            <div class="modal__actions">
-                <button class="modal__button modal__button--primary">Написать email</button>
-                <button class="modal__button modal__button--secondary">Закрыть</button>
-            </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Навигация -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Портфолио</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">🏠 Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/news.html">📰 Новости</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/goods.html">🛍️ Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/contacts.html">📞 Контакты</a></li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </header>
 
-    <script src="modal.js"></script>
-</body>
+    <!-- Хиро секция -->
+    <section class="bg-primary text-white py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 fw-bold mb-3">Портфолио студента</h1>
+            <p class="lead">Мишуков Владислав Романович</p>
+            <p class="text-white-75">Группа: ЭФБО-11-24</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Профиль -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="images/photo.jpg" alt="Фото автора" class="img-fluid rounded-circle shadow" style="width: 250px; height: 250px; object-fit: cover;">
+          </div>
+          <div class="col-md-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h3 class="card-title text-primary mb-3">Обо мне</h3>
+                <p class="card-text">
+                  Я родился в Москве в 70-м на краю города. Глупость рано ударила в голову.
+                  В четыре активно ругался. Потом школа, форма, драки, клей. Так я становился сильней.
+                  Воровал деньги в раздевалке.
+                </p>
+                <p class="card-text">
+                  Сейчас я студент и изучаю веб-разработку. Увлекаюсь современными технологиями,
+                  изучаю HTML, CSS, JavaScript. Мечтаю стать крутым фронтенд-разработчиком.
+                  В свободное время играю в игры, читаю техническую литературу и смотрю обучающие видео.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Навыки -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Мои навыки</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3" style="font-size: 3rem;">☕</div>
+                <h5 class="card-title text-primary">Эксперт по чаю</h5>
+                <p class="card-text">Мастер выбора правильной кружки к каждому коду</p>
+                <div class="progress mb-2" style="height: 8px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                </div>
+                <small class="text-muted">90%</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3" style="font-size: 3rem;">🦥</div>
+                <h5 class="card-title text-primary">Procrastinator</h5>
+                <p class="card-text">Супер сила откладывать дедлайны до последнего</p>
+                <div class="progress mb-2" style="height: 8px;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 95%"></div>
+                </div>
+                <small class="text-muted">95%</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3" style="font-size: 3rem;">🧠</div>
+                <h5 class="card-title text-primary">Гуглер</h5>
+                <p class="card-text">Мгновенно нахожу любой ответ через гугл</p>
+                <div class="progress mb-2" style="height: 8px;">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div>
+                </div>
+                <small class="text-muted">85%</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3" style="font-size: 3rem;">🎮</div>
+                <h5 class="card-title text-primary">Геймер-переключатель</h5>
+                <p class="card-text">Легко переключаюсь между кодом и играми</p>
+                <div class="progress mb-2" style="height: 8px;">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                </div>
+                <small class="text-muted">100%</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3" style="font-size: 3rem;">🐈</div>
+                <h5 class="card-title text-primary">Любитель мемов</h5>
+                <p class="card-text">Знаю тысячу мемов и котиков</p>
+                <div class="progress mb-2" style="height: 8px;">
+                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%"></div>
+                </div>
+                <small class="text-muted">80%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Опыт работы -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Опыт работы</h2>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card border-start border-primary border-4 h-100">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Студент-программист</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">РТУ МИРЭА</h6>
+                <p class="card-text"><small class="text-body-secondary">2024 - настоящее время</small></p>
+                <p class="card-text">
+                  Изучаю основы веб-разработки, работаю с HTML, CSS и JavaScript.
+                  Участвую в семестровых проектах и выполняю практические задания.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="card border-start border-success border-4 h-100">
+              <div class="card-body">
+                <h5 class="card-title text-success">Фрилансер-новичок</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Самозанятость</h6>
+                <p class="card-text"><small class="text-body-secondary">2024 - настоящее время</small></p>
+                <p class="card-text">
+                  Выполняю небольшие заказы по созданию простых веб-страниц.
+                  Учусь работать с клиентами и улучшаю свои технические навыки.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Достижения -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Дополнительные достижения</h2>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body">
+                <div class="mb-3" style="font-size: 4rem;">🏆</div>
+                <h5 class="card-title">Лучший студент недели</h5>
+                <p class="card-text text-muted">За выдающиеся успехи в прокрастинации</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body">
+                <div class="mb-3" style="font-size: 4rem;">🎯</div>
+                <h5 class="card-title">Мастер дедлайнов</h5>
+                <p class="card-text text-muted">Сдаю все работы в последнюю секунду</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm text-center h-100">
+              <div class="card-body">
+                <div class="mb-3" style="font-size: 4rem;">☕</div>
+                <h5 class="card-title">Кофеин-зависимый</h5>
+                <p class="card-text text-muted">Потребляю 5+ чашек чая в день</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
+        <p class="mb-0 text-white-50">Создано с ❤️ для семестровой работы</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
