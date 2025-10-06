@@ -9,41 +9,72 @@
 </head>
 
 <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <div>
-            <h2>Кот дня: обучение по графику</h2>
-            <p>Дата: 29 сентября 2025 | Автор: Лапкин Котей</p>
-            <p>Текст новости: Сегодня в 8 утра кот Пушистик демонстративно лег на клавиатуру во время важного митапа.
-                Количество усмешек среди слушателей превысило плановые показатели в 3 раза.</p>
-        </div>
-        <div>
-            <h2>Релиз: проект наконец работает</h2>
-            <p>Дата: 28 сентября 2025 | Автор: К. Разработчик</p>
-            <p>Текст новости: После 42 чашек чая и 73 багфиксов первый стабильный релиз проекта опубликован на GitHub, а
-                клавиатура официально признана героем дня.</p>
-        </div>
-        <div>
-            <h2>Полоса везения: найден баг столетия</h2>
-            <p>Дата: 27 сентября 2025 | Автор: Тестировщик Позитивный</p>
-            <p>Текст новости: Баг, появлявшийся только в новолуние на MacBook с наклейкой динозавра, был наконец
-                побежден коллективным усилием команды.</p>
-        </div>
-    </div>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Новости</h1>
+        </header>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <p>&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
-        <p>Создано с ❤️ для семестровой работы</p>
-    </footer>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Последние новости</h2>
+                <div class="news__list">
+                    <article class="news-item">
+                        <h3 class="news-item__title">Кот дня: обучение по графику</h3>
+                        <div class="news-item__meta">
+                            <span class="news-item__date">29 сентября 2025</span>
+                            <span class="news-item__author">Лапкин Котей</span>
+                        </div>
+                        <p class="news-item__content">Сегодня в 8 утра кот Пушистик демонстративно лег на клавиатуру во
+                            время важного митапа. Количество усмешек среди слушателей превысило плановые показатели в 3
+                            раза.</p>
+                    </article>
+
+                    <article class="news-item">
+                        <h3 class="news-item__title">Релиз: проект наконец работает</h3>
+                        <div class="news-item__meta">
+                            <span class="news-item__date">28 сентября 2025</span>
+                            <span class="news-item__author">К. Разработчик</span>
+                        </div>
+                        <p class="news-item__content">После 42 чашек чая и 73 багфиксов первый стабильный релиз проекта
+                            опубликован на GitHub, а клавиатура официально признана героем дня.</p>
+                    </article>
+
+                    <article class="news-item">
+                        <h3 class="news-item__title">Полоса везения: найден баг столетия</h3>
+                        <div class="news-item__meta">
+                            <span class="news-item__date">27 сентября 2025</span>
+                            <span class="news-item__author">Тестировщик Позитивный</span>
+                        </div>
+                        <p class="news-item__content">Баг, появлявшийся только в новолуние на MacBook с наклейкой
+                            динозавра, был наконец побежден коллективным усилием команды.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
+            <p class="footer__text">Создано с ❤️ для семестровой работы</p>
+        </footer>
+    </div>
 </body>
 
 </html>

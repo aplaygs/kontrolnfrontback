@@ -9,37 +9,66 @@
 </head>
 
 <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Товары</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <section class="products">
+                <h2 class="products__title">Наши товары</h2>
+                <div class="products__grid">
+                    <div class="product-card">
+                        <img class="product-card__image" src="../images/goods1.jpg" alt="Товар 1" width="200"
+                            height="200">
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Барсик</h3>
+                            <p class="product-card__price">10000 руб.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-card__image" src="../images/goods2.jpg" alt="Товар 2" width="200"
+                            height="200">
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Артурчик</h3>
+                            <p class="product-card__price">20000 руб.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-card__image" src="../images/goods3.jpg" alt="Товар 3" width="200"
+                            height="200">
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Нейрокот</h3>
+                            <p class="product-card__price">♾️ руб.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
+            <p class="footer__text">Создано с ❤️ для семестровой работы</p>
+        </footer>
     </div>
-    <div id="content">
-        <div>
-            <img src="../images/goods1.jpg" alt="Товар 1" width="200" height="200">
-            <p>Название: Барсик</p>
-            <p>Цена: 10000 руб.</p>
-        </div>
-        <div>
-            <img src="../images/goods2.jpg" alt="Товар 2" width="200" height="200">
-            <p>Название: Артурчик</p>
-            <p>Цена: 20000 руб.</p>
-        </div>
-        <div>
-            <img src="../images/goods3.jpg" alt="Товар 3" width="200" height="200">
-            <p>Название: Нейрокот</p>
-            <p>Цена: ♾️ руб.</p>
-        </div>
-    </div>
-    <!-- Футер -->
-    <footer class="footer">
-        <p>&copy; 2025 Мишуков Владислав Романович. Все права защищены.</p>
-        <p>Создано с ❤️ для семестровой работы</p>
-    </footer>
 </body>
 
 </html>
